@@ -12,4 +12,5 @@ RUN npm run build
 # Phase 2 run the app using a NGINX container
 # the path is from NGINX Docker hub documentation
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
